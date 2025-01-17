@@ -24,7 +24,7 @@ function Contact() {
     };
 
     try {
-      const response = await axios.post('http://192.168.0.106:9300/api/contactme', contactData);
+      const response = await axios.post('https://myportfoliobackend-1974.onrender.com/api/contactme', contactData);
       
       if (response) {
           setUploadStatus('success'); // Set success status
