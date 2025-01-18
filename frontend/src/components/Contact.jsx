@@ -212,7 +212,7 @@ function Contact() {
     
                         <button type='submit'
                         disabled={isLoading} 
-                            class="text-black bg-cyan-400 hover:bg-cyan-700 tracking-wide rounded-lg lg:text-xl sm:text-3xl font-bold px-4 py-3 flex items-center justify-center w-full !mt-6">
+                            class="text-black bg-cyan-400 hover:bg-cyan-700 tracking-wide rounded-lg lg:text-xl sm:text-4xl font-bold px-4 py-3 flex items-center justify-center w-full !mt-6">
                             {isLoading ? 'Sending...' : 'Send'}
                         </button>
                        
