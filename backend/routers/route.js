@@ -1,21 +1,24 @@
-import express from 'express';
-import Contact from '../models/contactme.js'
+import express from "express";
+import sendTelegramMessage from "../telegram.js";
 
 const router = express.Router();
 
+// Route to send a message to Telegram
+router.post("/postmessage", async (req, res) => {
+  const { name, phone, message } = req.body;
 
-router.post('/api/contactme', async (req, res) => {
-    const { name, phone, message } = req.body;
-    console.log('Received Data:', req.body);  // Log the incoming data for debugging
-  
-    try {
-      const newContact = new Contact({ name, phone, message });
-      await newContact.save(); // Save to MongoDB
-      res.status(200).json({ message: 'Data stored successfully!' });
-    } catch (error) {
-      console.error('Error storing contact:', error);  // Log the actual error
-      res.status(500).json({ error: 'Failed to store data' });
-    }
-  });
+  // Validate the request
+  if (!name || !phone || !message) {
+    return res.status(400).json({ error: "Name, phone number, and message are required." });
+  }
 
-  export default router; 
+  try {
+    // Send the message to Telegram
+    const result = await sendTelegramMessage(name, phone, message);
+    return res.status(200).json({ success: true, data: result });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+export default router;

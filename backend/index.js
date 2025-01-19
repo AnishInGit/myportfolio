@@ -1,5 +1,5 @@
 import express from 'express'
-import connectToMongo from "./db.js"
+import bodyParser from 'body-parser'
 import router from './routers/route.js'
 import cors from 'cors'
 import 'dotenv/config'
@@ -12,9 +12,12 @@ app.use(express.json());
 app.use(cors());
 
 
-app.use('/',router);
+// Middleware
+app.use(bodyParser.json());
+
+// Use the router for API endpoints
+app.use("/api", router);
 
 app.listen(port, () => {
-    connectToMongo();
   console.log(`Server listening on port ${port}`)
 }) 

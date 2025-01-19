@@ -24,7 +24,7 @@ function Contact() {
     };
 
     try {
-      const response = await axios.post('https://myportfoliobackend-1974.onrender.com/api/contactme', contactData);
+      const response = await axios.post('https://myportfoliobackend-1974.onrender.com/api/postmessage', contactData);
       
       if (response) {
           setUploadStatus('success'); // Set success status
