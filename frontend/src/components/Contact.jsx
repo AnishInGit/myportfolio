@@ -200,19 +200,19 @@ function Contact() {
                             class="w-100 sm:h-48 lg:h-32 mt-2 py-3 px-3 sm:text-3xl lg:text-lg rounded-lg bg-gray-800 border border-gray-400 dark:border-gray-700 text-white font-semibold focus:border-cyan-400 focus:outline-none"></textarea>
                         </div>
                         {uploadStatus === 'success' && (
-                          <div className="mt-6 text-center text-green-600 text-lg font-semibold">
+                          <div className="mt-6 text-center text-green-600 sm:text-2xl lg:text-xl font-semibold">
                                Successfully send !!!
                              </div>
                              )}
                       {uploadStatus === 'error' && (
-                         <div className="mt-6 text-center text-red-600 text-lg font-semibold">
+                         <div className="mt-6 text-center text-red-600 sm:text-2xl lg:text-xl font-semibold">
                               Failed to send your message...
                          </div>
                           )}
     
                         <button type='submit'
                         disabled={isLoading} 
-                            class="text-black bg-cyan-400 hover:bg-cyan-700 tracking-wide rounded-lg lg:text-xl sm:text-3xl font-bold px-4 py-3 flex items-center justify-center w-full !mt-6">
+                            class="text-black bg-cyan-400 hover:bg-cyan-700 tracking-wide rounded-lg lg:text-xl sm:text-4xl font-bold px-4 py-3 flex items-center justify-center w-full !mt-6">
                             {isLoading ? 'Sending...' : 'Send'}
                         </button>
                        
