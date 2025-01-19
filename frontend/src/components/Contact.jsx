@@ -10,11 +10,20 @@ function Contact() {
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [uploadStatus, setUploadStatus] = useState(null);
+  const [phoneError, setPhoneError] = useState('');
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validate phone number to be exactly 10 digits
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) {
+      setPhoneError('Phone number must be exactly 10 digits.');
+      return;
+    }
+
+    setPhoneError(''); // Clear error if valid
     setIsLoading(true); // Set loading state
 
     const contactData = {
@@ -54,12 +63,6 @@ function Contact() {
     }
   };
 
-  const handlePhoneChange = (e) => {
-    const value = e.target.value;
-    if (/^\d{0,10}$/.test(value)) {
-      setPhone(value);
-    }
-  };
 
   return (
 
@@ -194,9 +197,10 @@ function Contact() {
                             <input type="phone" name="phone" id="phone" placeholder="Phone No. (10 digits)" 
                             class="w-100 mt-2 py-3 px-3 sm:text-3xl lg:text-lg rounded-lg  bg-gray-800 border border-gray-400 dark:border-gray-700 text-white font-semibold focus:border-cyan-400 focus:outline-none"
                             value={phone}
-                            onChange={handlePhoneChange}
+                            onChange={(e) => setPhone(e.target.value)}
                              required/>
                         </div>
+                        {phoneError && <p className="text-red-500 text-sm mt-1">{phoneError}</p>}
     
                         <div class="flex flex-col mt-5 mb-10">
                             <label for="message" class="hidden">Message</label>
