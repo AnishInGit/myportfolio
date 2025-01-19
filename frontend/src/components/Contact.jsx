@@ -54,6 +54,13 @@ function Contact() {
     }
   };
 
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    if (/^\d{0,10}$/.test(value)) {
+      setPhone(value);
+    }
+  };
+
   return (
 
     <div class="relative flex items-top justify-center  ">
@@ -184,10 +191,10 @@ function Contact() {
     
                         <div class="flex flex-col mt-5">
                             <label for="phone" class="hidden">Phone No.</label>
-                            <input type="phone" name="phone" id="phone" placeholder="Phone No." 
+                            <input type="phone" name="phone" id="phone" placeholder="Phone No. (10 digits)" 
                             class="w-100 mt-2 py-3 px-3 sm:text-3xl lg:text-lg rounded-lg  bg-gray-800 border border-gray-400 dark:border-gray-700 text-white font-semibold focus:border-cyan-400 focus:outline-none"
                             value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
+                            onChange={handlePhoneChange}
                              required/>
                         </div>
     
