@@ -19,7 +19,7 @@ function Contact() {
     // Validate phone number to be exactly 10 digits
     const phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(phone)) {
-      setPhoneError('Phone number must be exactly 10 digits.');
+      setPhoneError('Please enter a valid phone number...');
       return;
     }
 
@@ -194,13 +194,22 @@ function Contact() {
     
                         <div class="flex flex-col mt-5">
                             <label for="phone" class="hidden">Phone No.</label>
-                            <input type="phone" name="phone" id="phone" placeholder="Phone No. (10 digits)" 
+                            <input type="number" name="phone" id="phone" placeholder="Phone No. [ 10 digits ]" 
                             class="w-100 mt-2 py-3 px-3 sm:text-3xl lg:text-lg rounded-lg  bg-gray-800 border border-gray-400 dark:border-gray-700 text-white font-semibold focus:border-cyan-400 focus:outline-none"
                             value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
+                            onChange={(e) => {
+                              const value = e.target.value;
+                              // Allow only digits and limit input to 10 characters
+                              if (/^\d{0,10}$/.test(value)) {
+                                setPhone(value);
+                                if (value.length === 10) {
+                                  setPhoneError(''); // Clear error when 10 digits are entered
+                                }
+                              }
+                            }}
                              required/>
+                            {phoneError && <p className="mt-6 text-center text-red-600 sm:text-2xl lg:text-xl font-semibold">{phoneError}</p>}
                         </div>
-                        {phoneError && <p className="text-red-500 text-sm mt-1">{phoneError}</p>}
     
                         <div class="flex flex-col mt-5 mb-10">
                             <label for="message" class="hidden">Message</label>
