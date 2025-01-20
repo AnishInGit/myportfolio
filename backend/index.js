@@ -18,6 +18,10 @@ app.use(bodyParser.json());
 // Use the router for API endpoints
 app.use("/api", router);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to Myportfolio Server side!!!')
+})
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`)
 }) 
