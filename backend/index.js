@@ -22,6 +22,12 @@ app.get('/', (req, res) => {
   res.send('Welcome to Myportfolio Server side!!!')
 })
 
+
+app.head('/', (req, res) => {
+   // End the response without sending a body
+  res.status(200).end();
+});
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`)
 }) 
