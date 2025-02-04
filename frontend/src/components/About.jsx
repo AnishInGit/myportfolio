@@ -1,7 +1,6 @@
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import cartoon from '../assets/3d-cartoon.png'
 
 const About = () => {

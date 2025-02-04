@@ -54,15 +54,15 @@ const Home = () => {
   return (
     <div
   id="Home"
-  className="relative w-full min-h-screen bg-black flex flex-col lg:flex-row lg:items-center justify-between px-6 pt-16 md:px-20 md:pt-20"
+  className="lg:pl-10 min-w-full min-h-screen bg-black grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:items-center sm:justify-items-center md:items-center "
 >
-  <div className="sm:text-left sm:max-w-fit sm:pt-[25%] lg:pt-0">
+  <div className=" relative sm:text-left sm:max-w-fit sm:pt-[25%] lg:pt-0  lg:pl-[25%] sm:pl-0  justify-center  ">
     <h3 className={`text-3xl md:text-4xl font-bold text-white ${isVisible ? "animate__animated animate__fadeInDown" : ""}`}>
       Hello, It's Me
     </h3>
     <h1
       ref={headerRef}
-      className={`text-5xl sm:text-8xl text-nowrap font-extrabold text-white mt-2 ${
+      className={`text-5xl sm:text-8xl text-nowrap   font-extrabold text-white mt-2 ${
         isVisible ? "animate__animated animate__fadeInLeft" : ""
       }`}
     >
@@ -143,14 +143,14 @@ const Home = () => {
     </a>
   </div>
 
-  <div className="mt-8 md:mt-0 lg:relative md:absolute md:right-2 sm:bottom-36 lg:bottom-20 z-10 animate-born flex justify-center">
+  <div className="sm:w-fit md:w-5/6 lg:w-8/12 animate-born sm:pb-24 lg:pb-0 ">
     <img
       src={pic}
       alt="Anish Maity"
-      className="rounded-full w-full  max-w-md sm:max-w-[100%]  lg:max-w-[85%] object-cover mx-auto"
+      className="rounded-full ml-16 "
     />
   </div>
-</div>
+</div> 
   );
 };
 
