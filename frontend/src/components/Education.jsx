@@ -13,7 +13,7 @@ const educations = [
     institute_name: "SRM University",
     date: "2021 - 2025",
     points: [
-      "CGPA:  8.76 /10",
+      "CGPA:  8.78 /10",
       "Specialized in software engineering and data structures.",
       "Completed multiple projects on web development and algorithms.",
     ],
@@ -24,7 +24,7 @@ const educations = [
     institute_name: "West Bengal State Board",
     date: "2020 - 2021",
     points: [
-      "Score: 81.4 %",
+      "Score: 79.5 %",
       "Focused on Mathematics, Physics, Chemistry and Biology.",
     ],
     iconBg: "#f39c12",
