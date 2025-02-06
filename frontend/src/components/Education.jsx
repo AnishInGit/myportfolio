@@ -31,7 +31,7 @@ const educations = [
   },
   {
     title: " Secondary Education (X)",
-    institute_name: "West Bengal Board of Secondary Education (WBBSE)",
+    institute_name: "West Bengal Board of Secondary Education",
     date: "2018 - 2019",
     points: [
       "Score: 74.14 %",
