@@ -96,10 +96,10 @@ const Education = () => (
            </ScrollAnimation>
     </div>
 
-    <div className="mt-10 ">
+    <div className=" overflow-x-hidden mt-10 ">
       <VerticalTimeline>
         {educations.map((education, index) => (
-          <EducationCard key={`education-${index}`} education={education} className="animate-slideRight" />
+          <EducationCard key={`education-${index}`} education={education} className=" animate-slideRight" />
         ))}
       </VerticalTimeline>
     </div>
