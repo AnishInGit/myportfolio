@@ -21,7 +21,7 @@ const educations = [
   },
   {
     title: "Higher Secondary Education (XII)",
-    institute_name: "West Bengal State Board",
+    institute_name: "West Bengal Council of Higher Secondary Education",
     date: "2020 - 2021",
     points: [
       "Score: 79.5 %",
@@ -31,7 +31,7 @@ const educations = [
   },
   {
     title: " Secondary Education (X)",
-    institute_name: "West Bengal State Board",
+    institute_name: "West Bengal Board of Secondary Education (WBBSE)",
     date: "2018 - 2019",
     points: [
       "Score: 74.14 %",
