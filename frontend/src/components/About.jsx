@@ -33,7 +33,7 @@ const About = () => {
       </div>
       <div className="about-image text-center ">
         <ScrollAnimation animateIn="animate__animated animate__fadeInRight" delay={0.2 * 1000}>
-          <div className=" sm:w-fit lg:w-3/4 mx-auto aspect-square   ">
+          <div className="overflow-hidden sm:w-fit lg:w-3/4 mx-auto aspect-square   ">
            <img src={cartoon} alt="3d Image"  />
           </div>
         </ScrollAnimation>
