@@ -16,7 +16,7 @@ const About = () => {
         <div className="border-cyan-400 border-4 m-5 text-cyan-400 hover:bg-cyan-400 hover:text-black shadow-2xl hover:shadow-[10px_5px_60px_25px_rgba(0,255,255,0.4)]  ">
         <ScrollAnimation animateIn="animate__animated animate__fadeInLeft " delay={.1 * 1000}>
           <p className="sm:text-2xl lg:text-lg leading-relaxed font-medium  pl-10 pr-5 pt-5 ">
-            Hi there! My name is Anish Maity, aB. Tech graduate in Computer Science and Engineering from SRM University with a strong
+            Hi there! My name is Anish Maity, a B. Tech graduate in Computer Science and Engineering from SRM University with a strong
 foundation in data structures, algorithms, and full-stack web development. Skilled in building scalable web applications
 and machine learning models.
           </p>
